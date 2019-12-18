@@ -54,10 +54,10 @@ class ModelPredictAPI(PredictAPI):
 
         args = input_parser.parse_args()
 
-        if not re.match("audio/.*wav", str(args['audio'].mimetype)):
-            e = BadRequest()
-            e.data = {'status': 'error', 'message': 'Invalid file type/extension: ' + str(args['audio'].mimetype)}
-            raise e
+#         if not re.match("audio/.*wav", str(args['audio'].mimetype)):
+#             e = BadRequest()
+#             e.data = {'status': 'error', 'message': 'Invalid file type/extension: ' + str(args['audio'].mimetype)}
+#             raise e
 
         audio_data = args['audio'].read()
 
